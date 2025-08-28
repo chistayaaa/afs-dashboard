@@ -1,0 +1,155 @@
+@import "../../../assets/styles/variables.scss";
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+
+  &.hidden {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+
+  input {
+    padding: 6px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  input:focus {
+    border: 2px solid $active-focus;
+  }
+}
+
+.modal__content {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9);
+  animation: scaleIn 0.3s ease-in-out forwards;
+  box-shadow: 4px 0 16px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &.hidden {
+    animation: scaleOut 0.3s ease-in-out forwards;
+  }
+}
+
+.reduced-gap {
+  gap: 12px;
+
+  .modal__actions {
+    padding-top: 12px;
+  }
+}
+
+.modal__title {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  text-align: center;
+}
+
+.modal__sub-label {
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.modal__actions {
+  display: flex;
+  box-sizing: border-box;
+  gap: 16px;
+
+  & button {
+    width: 100%;
+  }
+}
+
+.loader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../assets/styles/variables.scss";
+
+.input-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  label {
+    min-width: 160px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__input {
+    padding: 6px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+      border: 2px solid $active-focus;
+    }
+
+    &--error {
+      border-color: #ff4d4d;
+      outline: none;
+    }
+  }
+}

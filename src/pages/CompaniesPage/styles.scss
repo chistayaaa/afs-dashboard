@@ -1,0 +1,12 @@
+.page-companies {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 16px;
+}
+.companies__grid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,159 @@
+/* vars */
+$brand-primary: #3b3b3b;
+$brand-secondary: #6d4aff;
+$brand-variant: #6243e6;
+$brand-assist: #9981ff;
+$white: #ffffff;
+$active-red: #d72323;
+$active-focus: #35cdfd;
+
+/* common */
+.btn {
+  &__regular,
+  &__flattened {
+    padding: 10px 12px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    color: $brand-primary;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    font-size: 13px;
+    line-height: 20px;
+    transition: all 0.15s ease-in-out;
+    gap: 12px;
+    position: relative;
+    min-width: 148px;
+    max-height: 40px;
+
+    &:hover {
+      border: 1px solid rgb(0, 0, 0, 0.4);
+      color: $brand-secondary;
+      cursor: pointer;
+    }
+    &:active {
+      border: 1px solid $brand-variant;
+      color: $brand-variant;
+    }
+  }
+
+  &_white {
+    font-weight: 600;
+    background: $white;
+    &:hover {
+      border: 1px solid rgb(0, 0, 0, 0.4);
+      color: $brand-secondary;
+      cursor: pointer;
+    }
+    &:active {
+      border: 1px solid $brand-variant;
+      color: $brand-variant;
+    }
+  }
+
+  &_primary {
+    font-weight: 600;
+    background: $brand-primary;
+    color: $white;
+    box-shadow: 4px 0 16px 0 rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background: rgb(98, 98, 98);
+      color: rgb(255, 255, 255, 0.95);
+    }
+    &:active {
+      background: rgb(118, 118, 118);
+      color: rgb(255, 255, 255, 0.95);
+    }
+  }
+
+  &__flattened {
+    justify-content: flex-start;
+    background: transparent;
+    padding: 4px 8px;
+    font-size: 11px;
+    gap: 12px;
+    width: auto;
+    min-width: auto;
+
+    svg path {
+      stroke: $brand-primary;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease-in-out;
+    box-sizing: border-box;
+    height: fit-content;
+
+    svg path {
+      stroke: $brand-primary;
+    }
+
+    &:hover {
+      background: rgb($brand-primary, 0.05);
+      border-radius: 100%;
+    }
+    &:active {
+      background: rgba($brand-assist, 0.2);
+    }
+  }
+
+  &__icon_red {
+    svg path {
+      stroke: $active-red;
+    }
+  }
+}
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.page__title {
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  font-size: 28px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+.empty-state,
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  box-sizing: border-box;
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+}
+
+input:focus {
+  outline: none;
+}

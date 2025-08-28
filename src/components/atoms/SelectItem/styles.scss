@@ -1,0 +1,115 @@
+@import "../../../assets/styles/variables.scss";
+
+.select-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  &__label {
+    min-width: 160px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__wrapper {
+    position: relative;
+    flex: 1;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+      border: 2px solid $active-focus;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-top: 8px;
+  }
+
+  &__option {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.8);
+
+    &:hover {
+      background: #f3f4f6;
+    }
+
+    &.selected {
+      font-weight: 600;
+      color: $brand-primary;
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.custom-checkbox {
+  width: 20px;
+  box-sizing: border-box;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  svg {
+    display: none;
+    height: 16px;
+    width: 16px;
+  }
+
+  &.checked {
+    background: white;
+
+    svg {
+      display: block;
+    }
+  }
+}

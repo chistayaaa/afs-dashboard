@@ -1,0 +1,75 @@
+@import "../../../assets/styles/variables.scss";
+
+.sidebar {
+  width: 48px;
+  padding: 20px 6px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: $brand-primary;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+
+  &__header {
+    margin-bottom: 20px;
+    img {
+      max-width: 36px;
+      height: auto;
+    }
+  }
+
+  &__nav,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav {
+    height: 100%;
+  }
+
+  &__menu-link,
+  &__btn {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 36px;
+    max-height: 36px;
+    box-sizing: border-box;
+    transition: all 0.15s ease-in-out;
+
+    & .sidebar__image {
+      opacity: 95%;
+    }
+
+    &--active {
+      background: rgb(255, 255, 255, 0.2);
+
+      & .sidebar__image {
+        opacity: 100%;
+      }
+    }
+
+    &:hover {
+      background: rgb(255, 255, 255, 0.1);
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    padding: 0 8.5px;
+    background: rgb(255, 255, 255, 0.2);
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+}

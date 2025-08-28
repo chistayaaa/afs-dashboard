@@ -1,0 +1,25 @@
+@import "../../../assets/styles/variables.scss";
+
+.image-item {
+  border-radius: 10px;
+  width: 144px;
+  height: 108px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+
+  &__btn-delete {
+    position: absolute;
+    z-index: 5;
+    right: 8px;
+    top: 8px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-fit: cover;
+    z-index: 0;
+  }
+}

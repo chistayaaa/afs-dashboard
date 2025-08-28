@@ -1,0 +1,86 @@
+.edit-form {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 16px;
+
+  &__header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .loader {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.8); 
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+form {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+
+  .input_reduced:first-child {
+    width: calc(100% + 180px);
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .input-field__label {
+    width: 160px;
+    min-width: 160px;
+  }
+
+  .label_reduced .input-field__label {
+    width: auto;
+    min-width: unset;
+    padding-right: 12px;
+  }
+}

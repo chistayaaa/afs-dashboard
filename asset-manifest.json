@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/afs-dashboard/static/css/main.d0dbeb5e.css",
+    "main.js": "/afs-dashboard/static/js/main.867ff4e7.js",
+    "static/media/Settings.svg": "/afs-dashboard/static/media/Settings.7ac3aaa5c54682888de1c9e743c8bfa2.svg",
+    "static/media/Trash.svg": "/afs-dashboard/static/media/Trash.fba4208089f5c809d00f6685ebbcf68b.svg",
+    "static/media/Company.svg": "/afs-dashboard/static/media/Company.8345cbeb58ba565592e84172456b24c4.svg",
+    "static/media/Edit.svg": "/afs-dashboard/static/media/Edit.c89372155d5add7386cfdfff77931934.svg",
+    "static/media/Photo.svg": "/afs-dashboard/static/media/Photo.6a2ec3dbcc3fddc26827b3807e39606e.svg",
+    "static/media/Contractor.svg": "/afs-dashboard/static/media/Contractor.16d0e8cb0a052ef29875b3c3c3837f7b.svg",
+    "index.html": "/afs-dashboard/index.html",
+    "static/media/SignOut.svg": "/afs-dashboard/static/media/SignOut.64bc5caea7af3787eb7069ee76d26799.svg",
+    "static/media/Account.svg": "/afs-dashboard/static/media/Account.ac83fd4dc92abcc98fc245af83dda333.svg",
+    "static/media/Deceased.svg": "/afs-dashboard/static/media/Deceased.cb14c66509c4a293198917897013a376.svg",
+    "static/media/Chevron.svg": "/afs-dashboard/static/media/Chevron.5d130a138ecf3254ba7122404cd1cdde.svg",
+    "static/media/X.svg": "/afs-dashboard/static/media/X.0624afc6f75022c0069b65e75543972b.svg",
+    "static/media/Dropdown.svg": "/afs-dashboard/static/media/Dropdown.e9f339fa987a47c75178c48b02b6f69b.svg",
+    "static/media/Check.svg": "/afs-dashboard/static/media/Check.efcb8ca012f829be6a6bc4931b959078.svg",
+    "main.d0dbeb5e.css.map": "/afs-dashboard/static/css/main.d0dbeb5e.css.map",
+    "main.867ff4e7.js.map": "/afs-dashboard/static/js/main.867ff4e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0dbeb5e.css",
+    "static/js/main.867ff4e7.js"
+  ]
+}
